@@ -43,7 +43,59 @@ public class Room {
         return note;
     }
 
-    public void checkin(){
+    // setters will be needed for the checkin function
 
+    public void setRoomNumber(short roomNumber) {
+        this.roomNumber = roomNumber;
     }
+
+    public void setNumberOfGuests(short numberOfGuests) {
+        this.numberOfGuests = numberOfGuests;
+    }
+
+    public void setNumberOfBeds(short numberOfBeds) {
+        this.numberOfBeds = numberOfBeds;
+    }
+
+    public void setDateFrom(String dateFrom) {
+        this.dateFrom = dateFrom;
+    }
+
+    public void setDateTo(String dateTo) {
+        this.dateTo = dateTo;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public void checkin(){
+        // print out 'checkin' + set all the metadata of the class, write all of that into a file
+    }
+
+    public void availability() {
+        // prints out a list of the rooms, available on a certain date (if date is not mentioned, today's date is the default)
+    }
+
+    public void checkout() {
+        // 'checkout' + room; makes the room available
+    }
+
+    public void report() {
+        // date from + date to; prints out a list of all the rooms, used in that period + the number of days each room has been used
+    }
+
+    public void find() {
+        // find a room with needed number of beds from a date to a date; when multiple rooms are available, the smaller number of beds - the better
+    }
+
+    public void findImportant() {
+        // when no room is available for an important guest, move around guests from maximum 2 rooms in order to make a room free for the important guest
+    }
+
+    public void unavailable() {
+        // 'unavailable' + room number + date from + date to + note; no guests in the room and noone can stay there in the time period
+    }
+
+    // check out the 3 additional comments at the bottom of the pdf
 }
