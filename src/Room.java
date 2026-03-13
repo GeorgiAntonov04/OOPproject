@@ -1,4 +1,4 @@
-public class Room {
+public class Room{
     private short roomNumber; // might need to be an int
     private short numberOfGuests;
     private short numberOfBeds;
@@ -53,7 +53,7 @@ public class Room {
         this.numberOfGuests = numberOfGuests;
     }
 
-    public void setNumberOfBeds(short numberOfBeds) {
+    public void setNumberOfBeds(short numberOfBeds) { // this will be fixed to each room, so maybe no need for that
         this.numberOfBeds = numberOfBeds;
     }
 
@@ -70,7 +70,27 @@ public class Room {
     }
 
     public void checkin(){
-        // print out 'checkin' + set all the metadata of the class, write all of that into a file
+        System.out.println("Enter the required data: ");
+        System.out.printf("Date from: "); // so that the input is on the same line
+        setDateFrom(dateFrom);
+        System.out.println();
+        System.out.printf("Date to: ");
+        setDateTo(dateTo);
+        System.out.println();
+        System.out.printf("Add a note stating your family name: ");
+        setNote(note);
+        System.out.println();
+        System.out.printf("Would you like to specifically state the number of guests are visiting? ");
+        // If yes - state how many, if no - number of guests = number of beds
+            System.out.printf("State how many guests are visiting: ");
+            setNumberOfGuests(numberOfGuests);
+        System.out.println();
+        System.out.println("Here is a table of the rooms we can offer you: "); // here a table with a structure: "roomNumber-numberOfBeds" should appear
+        System.out.println();
+        System.out.println("Your choice is room number: ");
+        setRoomNumber(roomNumber);
+        System.out.println("Checkin " + getRoomNumber() + getDateFrom() + getDateTo() + getNote() + getNumberOfGuests());
+        // write all of that into a file
     }
 
     public void availability() {
