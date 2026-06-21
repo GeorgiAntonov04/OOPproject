@@ -20,7 +20,6 @@ public class Main {
             // Разделяне на думи по празни пространства
             String[] tokens = line.split("\\s+");
 
-            // Търсене на командата в регистъра БЕЗ switch-case
             Command command = registry.find(tokens[0]);
 
             if (command == null) {
@@ -29,7 +28,6 @@ public class Main {
             }
 
             try {
-                // Извикване на полиморфния метод
                 command.execute(tokens, context);
             } catch (Exception e) {
                 System.out.println("Грешка: " + e.getMessage());
