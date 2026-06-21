@@ -13,6 +13,7 @@ public class CommandRegistry {
     public Command find(String name) {
         for (Command cmd : commands) {
             if (cmd.getName().equalsIgnoreCase(name)) {
+                return cmd;
             }
         }
         return null;
