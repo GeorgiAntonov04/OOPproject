@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommandRegistry {
-
     private final List<Command> commands = new ArrayList<>();
 
     public void register(Command command) {
@@ -14,7 +13,6 @@ public class CommandRegistry {
     public Command find(String name) {
         for (Command cmd : commands) {
             if (cmd.getName().equalsIgnoreCase(name)) {
-                return cmd;
             }
         }
         return null;
