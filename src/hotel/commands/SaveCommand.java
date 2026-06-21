@@ -24,9 +24,9 @@ public class SaveCommand implements Command {
 
         String filename = context.getCurrentFile();
 
-        // Класически запис чрез PrintWriter
+
         try (PrintWriter writer = new PrintWriter(filename)) {
-            // Обикновен вложен цикъл (без Streams)
+
             for (Room r : context.getRooms()) {
                 writer.println("ROOM " + r.getNumber() + " " + r.getBeds());
 

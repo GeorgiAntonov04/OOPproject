@@ -39,7 +39,6 @@ public class OpenCommand implements Command {
             return;
         }
 
-        // Класическо четене с конструкции за ресурс try-with-resources
         try (Scanner fileScanner = new Scanner(file)) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine().trim();

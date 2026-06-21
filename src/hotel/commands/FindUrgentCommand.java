@@ -26,7 +26,7 @@ public class FindUrgentCommand implements Command {
         LocalDate from = LocalDate.parse(tokens[2]);
         LocalDate to = LocalDate.parse(tokens[3]);
 
-        // 1. Директно търсене с обикновен цикъл
+
         for (Room r : context.getRooms()) {
             if (r.getBeds() >= beds && r.isAvailableForPeriod(from, to)) {
                 System.out.println("Намерена свободна стая: Стая " + r.getNumber());
@@ -36,7 +36,7 @@ public class FindUrgentCommand implements Command {
 
         System.out.println("Няма директно свободна стая. Търсене на опции за преместване...");
 
-        // 2. Логика за преместване (чисти цикли)
+
         for (Room targetRoom : context.getRooms()) {
             if (targetRoom.getBeds() < beds) continue;
 
